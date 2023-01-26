@@ -1,26 +1,16 @@
 import * as React from "react";
 import { v4 as uuidv4 } from 'uuid';
 import {
-  Box,
-  Typography,
   TextField,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
   Button
 } from "@mui/material";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import states from "../utils/states";
 import CustomSelect from "../utils/Path";
 import moment from "moment";
 
 const SecondForm = ({
   userData,
   setUserData,
-  form,
   setForm,
   booking,
   setBooking

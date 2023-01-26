@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import FirstForm from "./pages/FirstForm";
 import SecondForm from "./pages/SecondForm";
+import { display } from "@mui/system";
 
 const bookings = [
   {
@@ -111,6 +112,7 @@ export default function App() {
           </Button>
         ) : null}
       </Card>
+      <div style={{display:'flex', justifyContent:"center", alignItems:"center"}}>
       {form.first ? (
         <FirstForm
           userData={userData}
@@ -129,6 +131,7 @@ export default function App() {
           booking={booking}
         />
       ) : null}
+      </div>
       {form.container ? (
         <TableContainer
           elevation={4}
