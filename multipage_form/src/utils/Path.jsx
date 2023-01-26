@@ -94,9 +94,9 @@ export default function CustomizedSelects({ userData, setUserData }) {
   };
   return (
     <div>
-      <div>
+      <div style={{display:'flex', alignItems:'center'}}>
+        <span>Source: </span>
         <FormControl sx={{ m: 1 }} variant="standard">
-          <Typography variant="span">Source</Typography>
           <TextField
             id="outlined-basic"
             label="City"
@@ -113,14 +113,15 @@ export default function CustomizedSelects({ userData, setUserData }) {
             }
           />
         </FormControl>
-        <FormControl sx={{ m: 1 }} variant="standard">
+        <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
+
           <Select
-            labelId="demo-customized-select-label"
-            id="demo-customized-select"
-            label="States"
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            label="Country"
             value={userData.journey.from.country}
             onChange={handleCountry}
-            input={<BootstrapInput />}
           >
             {countries.map((country) => (
               <MenuItem key={country.id} value={country.name}>
@@ -129,13 +130,15 @@ export default function CustomizedSelects({ userData, setUserData }) {
             ))}
           </Select>
         </FormControl>
-        <FormControl sx={{ m: 1 }} variant="standard">
+        <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-simple-select-helper-label">State</InputLabel>
+
           <Select
-            labelId="demo-customized-select-label"
-            id="demo-customized-select"
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            label="Country"
             value={userData.journey.from.state}
             onChange={handleState}
-            input={<BootstrapInput />}
           >
             {stateFromData.map((state) => (
               <MenuItem key={state.id} value={state.name}>
@@ -145,7 +148,8 @@ export default function CustomizedSelects({ userData, setUserData }) {
           </Select>
         </FormControl>
       </div>
-      <div>
+      <div style={{display:'flex', alignItems:'center'}}>
+        <span>Destination: </span>
         <FormControl sx={{ m: 1 }} variant="standard">
           <TextField
             id="outlined-basic"
@@ -163,14 +167,16 @@ export default function CustomizedSelects({ userData, setUserData }) {
             }
           />
         </FormControl>
-        <FormControl sx={{ m: 1 }} variant="standard">
+
+        <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
+
           <Select
-            labelId="demo-customized-select-label"
-            id="demo-customized-select"
-            label="States"
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            label="Country"
             value={userData.journey.to.country}
             onChange={handleToCountry}
-            input={<BootstrapInput />}
           >
             {countries.map((country) => (
               <MenuItem key={country.id} value={country.name}>
@@ -179,13 +185,15 @@ export default function CustomizedSelects({ userData, setUserData }) {
             ))}
           </Select>
         </FormControl>
-        <FormControl sx={{ m: 1 }} variant="standard">
+        <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-simple-select-helper-label">State</InputLabel>
+
           <Select
-            labelId="demo-customized-select-label"
-            id="demo-customized-select"
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            label="State"
             value={userData.journey.to.state}
             onChange={handleToState}
-            input={<BootstrapInput />}
           >
             {stateToData.map((state) => (
               <MenuItem key={state.id} value={state.name}>

@@ -13,11 +13,11 @@ const FirstForm = ({ userData, setUserData, form, setForm }) => {
     let {
       user: { firstName, lastName, gender, dob }
     } = userData;
-    if (firstName === "" || lastName === "" || gender === "") {
-      console.log("Please fill all the details");
-    } else {
+    // if (firstName === "" || lastName === "" || gender === "") {
+    //   console.log("Please fill all the details");
+    // } else {
       setForm({ ...form, first: !form.first, second: true });
-    }
+    //}
   }
 
   return (
